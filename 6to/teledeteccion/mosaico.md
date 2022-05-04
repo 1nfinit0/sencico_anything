@@ -13,3 +13,5 @@ El uso de la herramienta (Mosaic pro), permite el desarrollo de los pasos princi
 - Imágenes con diferente tamaño de pixel
 - Imágenes con diferente número de bandas
 
+search peanut jazz media blush decline icon rich inflict confirm focus marriage ship fetch fancy nature awesome humble tuition lesson diagram toddler worth thumb
+
