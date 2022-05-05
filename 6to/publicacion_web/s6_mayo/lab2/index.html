@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                showFoodMenu();
+            });
+            
+            function showFoodMenu() {
+                $.ajax({
+                    type: "GET",
+                    url: "./demo.xml",
+                    dataType: "xml",
+                    error: function (e) {
+                        alert("Se produjo un error al procesar el archivo XML");
+                        console.log("Lectura XML fallida: ", e);
+                    },
+                    success: function (response) {
+                        $("ul").children().remove();
+                        $(response).find("food").each(function () {
+                            var _name = 'Name: ' + $(this).find('name').text();
+			    var _price = 'Precio: ' + $(this).find('price').text();
+                            var _calories = 'Calorias: ' + $(this).find('calories').text();
+                            var _description = 'Descripcion: ' + $(this).find('description').text();
+			    $("ul").append('<li>' + _name + '</li>');
+                            $("ul").append('<li>' + _price + '</li>');
+			    $("ul").append('<li>' + _calories + '</li>');
+                            $("ul").append('<li>' + _description + '</li>');
+                        });
+                    }
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <div class="jumbotron">
+            <h1 id="headerTitle">Lista del menú para la comida</h1>
+        </div>
+        
