@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>XML-Jquery</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#headerTitle").hide(300).show(1500);
+                showLaboratorio();
+            });
+            
+            function showLaboratorio() {
+                $.ajax({
+                    type: "GET",
+                    url: "./dem0.xml",
+                    dataType: "xml",
+                    error: function (e) {
+                        alert("Se produjo un error al procesar el archivo XML");
+                        console.log("Lectura XML fallida: ", e);
+                    },
+                    success: function (response) {
+                        // $("ul").children().remove();
+                        // $(response).find("entidad").each(function () {
+                        //     var _company = 'Company' + $(this).find('company').text();zaasdojhikasd
+                        $(response).find("entidad").each(function() {
+                                var fila = $('<tr>');
+                                fila.append($(`<td>${$(this).find('company').text()}</td>`));
+                                fila.append($(`<td>${$(this).find('contact').text()}</td>`));
+                                fila.append($(`<td>${$(this).find('country').text()}</td>`));
+
+                                $('#negocio tbody').append(fila);
+                        });
+
+                    }
+                });
+            }
+        </script>
+        <style>
+            table {
+                margin-top: 200px;
+                width: 65%;
+                height: 35vh;
+                border-radius: 10%;
+                
+            }
+            table th{
+                text-align: center;
+                background-color: rgb(156, 156, 156);
+            }
+            table tbody{
+                text-align: center;
+                background-color: rgb(198, 198, 198);
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="jumbotron" style="text-align: center;">
+                <h1 id="headerTitle">Laboratorio Sencico.</h1>
+            </div>
+            <ul></ul>
+            <hr>
+            <table id="negocio" align="center" border="1">
+                <thead>
+                    <th>Company</th>
+                    <th>Contact</th>
+                    <th>Country</th>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </body>
+</html>

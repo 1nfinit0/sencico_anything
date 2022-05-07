@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Laboratoriosencico> 
+   <entidad> 
+       <company>Alfreds Futterkist</company> 
+       <contact>Marìa Anders</contact> 
+       <country>Germany.</country> 
+   </entidad>
+    <entidad> 
+       <company>Centro Comercial Moctezuma</company> 
+       <contact>Francisco Chang</contact> 
+       <country>Mexico</country> 
+   </entidad>
+    <entidad> 
+       <company>Ernst Handel</company> 
+       <contact>Roland Mendel</contact> 
+       <country>Austria</country> 
+   </entidad>
+    <entidad> 
+       <company>Island Trading</company> 
+       <contact>Helen Bennett</contact> 
+       <country>UK</country> 
+   </entidad>
+    <entidad> 
+       <company>Laughing Bacchus Winercellars</company> 
+       <contact>Yoshi Tannamuri</contact> 
+       <country>Canada</country> 
+   </entidad>
+    <entidad> 
+       <company>Magazzini Alimentari Riuniti</company> 
+       <contact>Giovanni Rovelli</contact> 
+       <country>Italy.</country> 
+   </entidad>
+</Laboratoriosencico>

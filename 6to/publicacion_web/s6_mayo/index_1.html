@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("button").click(function(){
+                    $.ajax({url: "demo_test.txt", success: function(result){
+                        $("#div1").html(result);
+                    }});
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="div1">
+            <h2>Lectura de un fichero txt, usando jQuery - Ajax</h2>
+        </div>
+        <button>Ver</button>
+    </body>
+</html>
