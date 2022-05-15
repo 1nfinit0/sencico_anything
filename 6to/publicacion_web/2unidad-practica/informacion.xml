@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Examen>
+    <pais1>
+        <nombrepais>España</nombrepais>
+        <ciudad1>Madrid</ciudad1>
+        <regiones>
+            <region>Getafe</region>
+            <region>Leganés</region>
+            <region>Torrejón</region>
+        </regiones>
+        <ciudades>
+            <nombreciudad>Cataluña</nombreciudad>
+        </ciudades>
+        <regiones>
+            <region>Barceclona</region>
+            <region>Gerona</region>
+            <region>Lleida</region>
+            <region>Terragona</region>
+        </regiones>
+    </pais1>
+    <!-- <pais>
+        <nombrepais>Francia</nombrepais>
+        <ciudades>
+            <nombreciudad>Paris</nombreciudad>
+            <region>Campos Elíseos</region>
+        </ciudades>
+        <ciudades>
+            <nombreciudad>Lyon</nombreciudad>
+        </ciudades>
+        <ciudades>
+            <nombreciudad>Burdeos</nombreciudad>
+        </ciudades>
+    </pais>
+    <pais>
+        <nombrepais>Italia</nombrepais>
+        <ciudades>
+            <nombreciudad>Roma</nombreciudad>
+            <region>Coliseo</region>
+        </ciudades>
+        <ciudades>
+            <nombreciudad>Milán</nombreciudad>
+        </ciudades>
+        <ciudades>
+            <nombreciudad>Florencia</nombreciudad>
+        </ciudades>
+    </pais>
+    <pais>
+        <nombrepais>Estados Unidos</nombrepais>
+        <ciudades>
+            <nombreciudad>Nueva York</nombreciudad>
+        </ciudades>
+        <ciudades>
+            <nombreciudad>Chicago</nombreciudad>
+        </ciudades>
+        <ciudades>
+            <nombreciudad>Los Ángeles</nombreciudad>
+            <region>Hollywood</region>
+        </ciudades>
+    </pais>
+    <pais>
+        <nombrepais>Brasil</nombrepais>
+        <ciudades>
+            <nombreciudad>Río de Janeiro</nombreciudad>
+        </ciudades>
+    </pais>
+    <pais>
+        <nombrepais>Japón</nombrepais>
+        <ciudades>
+            <nombreciudad>Tokio</nombreciudad>
+        </ciudades>
+    </pais>
+    <pais>
+        <nombrepais>Australia</nombrepais>
+        <ciudades>
+            <nombreciudad>Melbourne</nombreciudad>
+        </ciudades>
+    </pais> -->
+</Examen>

@@ -4,7 +4,9 @@
 # Escribir el script para mostrar
 # 	La fecha hora (del lado derecho – color azul – formato: YYYYMMDD HHMM)
 
-cadena="nowcastingclimatologico_20201028-0740_⋯_20201116-1930_web.shp"
+cadena="<a class='text-primary' href='https://maps.geodir.co/places/codpos384670/04000/-16.174076/-71.576868'><span class='geodir-icon-marker2'></span> 04000</a>"
 rcadena=cadena[::-1]
 print("Cadena: "+cadena)
-print("Fecha y hora:\t"+rcadena[14:12:-1]+"/"+rcadena[16:14:-1]+"/"+rcadena[20:16:-1]+"\t"+rcadena[11:9:-1]+":"+rcadena[9:7:-1])
+print(rcadena[8:3:-1])
+
+

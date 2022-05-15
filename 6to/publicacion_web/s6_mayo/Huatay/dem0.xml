@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Examen>
+    <pais>
+        <nombrepais>España</nombrepais>
+        <ciudad1>Madrid</ciudad1>
+        <regiones1>
+            <region>Getafe</region>
+            <region>Leganés</region>
+            <region>Torrejón</region>
+        </regiones1>
+        <ciudad2>
+            <nombreciudad>Cataluña</nombreciudad>
+        </ciudad2>
+        <regiones2>
+            <region>Barceclona</region>
+            <region>Gerona</region>
+            <region>Lleida</region>
+            <region>Terragona</region>
+        </regiones2>
+    </pais>
+    <pais1>
+        <nombrepais>Francia</nombrepais>
+        <ciudad1>París</ciudad1>
+        <regiones1>
+            <region>Campos Elíseos</region>
+        </regiones1>
+        <ciudad2>Lyon</ciudad2>
+        <ciudad3>Burdeos</ciudad3>
+    </pais1>
+    <pais2>
+        <nombrepais>Italia</nombrepais>
+        <ciudad1>Roma</ciudad1>
+        <regiones1>
+            <region>Coliseo</region>
+        </regiones1>
+        <ciudad2>
+            <nombreciudad>Milán</nombreciudad>
+        </ciudad2>
+        <ciudad3>
+            <nombreciudad>Florencia</nombreciudad>
+        </ciudad3>
+    </pais2>
+    <pais3>
+        <nombrepais>Estados unidos</nombrepais>
+        <ciudad1>Nueva York</ciudad1>
+        <ciudad2>
+            <nombreciudad>Chicago</nombreciudad>
+        </ciudad2>
+        <ciudad3>
+            <nombreciudad>Los Ánglees</nombreciudad>
+        </ciudad3>
+        <regiones3>
+            <region>Hollywood</region>
+        </regiones3>
+    </pais3>
+    <pais4>
+        <nombrepais>Brasil</nombrepais>
+        <ciudad1>Rio de Janeiro</ciudad1>
+    </pais4>
+    <pais5>
+        <nombrepais>Japón</nombrepais>
+        <ciudad1>Tokio</ciudad1>
+    </pais5>
+    <pais6>
+        <nombrepais>Australia</nombrepais>
+        <ciudad1>Mellbourne</ciudad1>
+    </pais6>
+</Examen>

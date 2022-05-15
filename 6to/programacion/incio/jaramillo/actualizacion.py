@@ -1,5 +1,3 @@
-#Según el profesor pasa ejecutar la operación de lectura del archvivo online necesitaremos estas 3 libreriías:
-
 import psycopg2
 import requests
 import pandas
@@ -56,13 +54,14 @@ def cuenca(longitud, latitud):
     cursor.execute("SELECT x.codigo, x.nomb_uh_n1, x.nombre FROM dbcarto_fundamento.cuencas x, (SELECT ST_SetSRID(ST_MakePoint(%s,%s), 4326) AS geom) y WHERE ST_Contains(x.geometry, y.geom)",(longitud, latitud))
     rs = cursor.fetchall()
     for row in rs:
-        codigo = row[0]
+        cod_cuenca = row[0]
         unidad_hidro = row[1]
-        nombre = row[2]
+        nom_cuenca = row[2]
     connection.commit()
     cursor.close()
     connection.close()
-    return [codigo, unidad_hidro, nombre]
+    return [cod_cuenca, unidad_hidro, nom_cuenca]
+    
 
 def delete_data():
     db = resources_db()
@@ -72,6 +71,19 @@ def delete_data():
     connection.commit()
     cursor.close()
     connection.close()
+    
+def geodir_codigo_postal(longitud, latitud):
+    db = resources_db()
+    connection = psycopg2.connect(database=db[0], user=db[1], password=db[2])
+    cursor = connection.cursor()
+    cursor.execute("SELECT x.codigo_postal FROM dbcarto_fundamento.geodir_codigo_postal x, (SELECT ST_SetSRID(ST_MakePoint(%s,%s), 4326) AS geom) y WHERE ST_Contains(x.geom, y.geom)",(longitud, latitud))
+    rs = cursor.fetchall()
+    for row in rs:
+        ubigeo = row[143:147]
+    connection.commit()
+    cursor.close()
+    connection.close()
+    return ubigeo
 
 delete_data()
 
@@ -95,25 +107,11 @@ for i, row in df.iterrows():
     cod_cuenca = cuencas[0]
     nom_und_hidro = cuencas[1]
     nom_cuenca = cuencas[2]
-    print(
-        cod_reservorio,
-        nom_reservorio,
-        nom_sector,
-        longitud,
-        latitud,
-        fecha,
-        porcentaje,
-        nom_departamento,
-        nom_provincia,
-        nom_distrito,
-        cuencas[0],
-        cuencas[1],
-        cuencas[2]
-        )
-
-    cursor.execute("INSERT INTO dbcarto_fundamento.reservorios(cod_reservorio, nom_reservorio, nom_sector, longitud, latitud, fecha, porcentaje, nom_departamento, nom_provincia, nom_distrito, cod_cuenca, nom_cuenca, nom_und_hidro, geom) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,ST_SetSRID(ST_MakePoint(%s,%s), 4326))", (cod_reservorio, nom_reservorio, nom_sector, longitud, latitud, fecha, porcentaje, nom_departamento, nom_provincia, nom_distrito, cod_cuenca, nom_cuenca, nom_und_hidro, longitud, latitud))
+    codpostal = geodir_codigo_postal(longitud, latitud)    
+    print(cod_reservorio, nom_reservorio, nom_sector, longitud, latitud, fecha, porcentaje, nom_departamento, nom_provincia, nom_distrito, cod_cuenca, nom_und_hidro, nom_cuenca, codpostal)
+    
+    cursor.execute("INSERT INTO dbcarto_fundamento.reservorios(cod_reservorio, nom_reservorio, nom_sector, longitud, latitud, fecha, porcentaje, nom_departamento, nom_provincia, nom_distrito, cod_cuenca, nom_cuenca, nom_und_hidro, codigo_postal, geom) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,ST_SetSRID(ST_MakePoint(%s,%s), 4326))", (cod_reservorio, nom_reservorio, nom_sector, longitud, latitud, fecha, porcentaje, nom_departamento, nom_provincia, nom_distrito, cod_cuenca, nom_cuenca, nom_und_hidro, codpostal, longitud, latitud))
 
 connection.commit()
 cursor.close()
 connection.close()
-
