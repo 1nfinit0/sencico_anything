@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Etapas del Mercado</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#headerTitle").hide(300).show(1500);
+                showFoodMenu();
+            });
+            
+            function showFoodMenu() {
+                $.ajax({
+                    type: "GET",
+                    url: "./mercado.xml",
+                    dataType: "xml",
+                    error: function (e) {
+                        alert("Se produjo un error al procesar el archivo XML");
+                        console.log("Lectura XML fallida: ", e);
+                    },
+                    success: function (response) {
+                        $("div").children();
+                        $(response).find("Mercado").each(function () {
+                            var _descripcion = $(this).find('descripcion').text();
+                            $("section").append('<div style="font-size: 16px; margin: 35px;">' + _descripcion + '</div>');
+                            var _positivo = $(this).find('positivo').text();
+                            $("aside").append('<div style="font-size: 16px; margin: 35px;">' + _positivo + '</div>');
+                            var _negativo = $(this).find('negativo').text();
+                            $("asideb").append('<div style="font-size: 16px; margin: 35px;">' + _negativo + '</div>');
+                            var _rasgo1 = $(this).find('rasgo1').text();
+                            $("ul").append('<li style="font-size: 20px; margin-left: 300px;  list-style: none; margin-bottom: 20px; background: #EB984E; width: 150px; text-align: center; color: white; padding: 6px; border-radius: 14px">' + _rasgo1 + '</li>');
+                            var _rasgo2 = $(this).find('rasgo2').text();
+                            $("ul").append('<li style="font-size: 20px; margin-left: 550px;  list-style: none; margin-bottom: 30px; background: #E67E22; width: 150px; text-align: center; color: white; padding: 6px; border-radius: 14px">' + _rasgo2 + '</li>');
+                            var _rasgo3 = $(this).find('rasgo3').text();
+                            $("ul").append('<li style="font-size: 20px; margin-left: 800px;  list-style: none; margin-bottom: 50px; background: #CA6F1E; width: 150px; text-align: center; color: white; padding: 6px; border-radius: 14px">' + _rasgo3 + '</li>');
+                            var _rasgo4 = $(this).find('rasgo4').text();
+                            $("ul").append('<li style="font-size: 20px; margin-left: 550px;  list-style: none; margin-bottom: 30px; background: #A04000; width: 150px; text-align: center; color: white; padding: 6px; border-radius: 14px">' + _rasgo4 + '</li>');
+                            var _rasgo5 = $(this).find('rasgo5').text();
+                            $("ul").append('<li style="font-size: 20px; margin-left: 300px;  list-style: none; margin-bottom: 50px; background: #9C640C; width: 150px; text-align: center; color: white; padding: 6px; border-radius: 14px">' + _rasgo5 + '</li>');
+                            var _rasgo6 = $(this).find('rasgo6').text();
+                            $("ul").append('<li style="font-size: 20px; margin-left: 550px;  list-style: none; margin-bottom: 30px; background: #A93226 ; width: 150px; text-align: center; color: white; padding: 6px; border-radius: 14px">' + _rasgo6 + '</li>');
+                            var _rasgo7 = $(this).find('rasgo7').text();
+                            $("ul").append('<li style="font-size: 20px; margin-left: 800px;  list-style: none; margin-bottom: 50px; background: #A93226; width: 150px; text-align: center; color: white; padding: 6px; border-radius: 14px">' + _rasgo6 + '</li>');
+                            var _rasgo8 = $(this).find('rasgo8').text();
+                            $("ul").append('<li style="font-size: 20px; margin-left: 550px;  list-style: none; margin-bottom: 50px; background: #922B21; width: 150px; text-align: center; color: white; padding: 6px; border-radius: 14px">' + _rasgo8 + '</li>');
+                            var _rasgo9 = $(this).find('rasgo9').text();
+                            $("ul").append('<li style="font-size: 20px; margin-left: 300px;  list-style: none; margin-bottom: 50px; background: #7B241C; width: 150px; text-align: center; color: white; padding: 6px; border-radius: 14px">' + _rasgo9 + '</li>');
+                            var _rasgo10 = $(this).find('rasgo10').text();
+                            $("ul").append('<li style="font-size: 20px; margin-left: 550px;  list-style: none; margin-bottom: 30px; background: #641E16; width: 150px; text-align: center; color: white; padding: 6px; border-radius: 14px">' + _rasgo10 + '</li>');
+                        })
+                        ;
+                    }
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="jumbotron" style="text-align: center;">
+                <h1 id="headerTitle" style="color: rgb(21, 21, 61);">Ciclo de Vida del Mercado</h1>
+            </div>
+        </div>
+        <section style="background: rgb(142, 161, 226); width: 500px; height: 400px; margin-left: 400px;; border-radius: 30px; padding-top: 20px; text-align: center;">
+            <container style="font-size: 25px; margin: 30px; padding: 25px;">Qué es la psicología del Mercado</container>
+        </section>
+        <div style="display: flex;">
+        <aside style="background: rgb(140, 231, 152); width: 500px; height: 270px; margin-left: 100px; border-radius: 30px; padding-top: 20px; margin-top: 20px; text-align: center;">
+            <span style="font-size: 25px; margin: 30px; padding: 25px;">El lado Positivo</span>
+        </aside>
+        <asideb style="background: rgb(54, 16, 33); width: 500px; height: 270px; margin-left: 100px; border-radius: 30px; padding-top: 20px; margin-top: 20px;color: rgb(200, 200, 200); text-align: center;">
+            <span style="font-size: 25px; margin: 30px; padding: 25px;">El lado Negativo</span>
+        </asideb>
+        </div>
+        <h2 style="font-size: 40px; text-align: center; margin-top: 70px; margin-bottom: 50px;">Etapas</h2>
+        <ul></ul>
+    </body>
+</html>
