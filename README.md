@@ -1,2 +1,10 @@
-# sencico_anything
-Notes
+# sencico anything ga
+* NOTES
+    * NOTES
+        * NOTES
+            * NOTES
+                * NOTES
+            * NOTES
+        * NOTES
+    * NOTES
+* NOTES
