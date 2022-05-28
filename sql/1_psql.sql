@@ -86,6 +86,13 @@ Usar el rol creado anteriormente (buenas prácticas)
 SELECT current_user;
 
 /*
+    Listar sesiones activas  en una determinada base de datos
+    (no colocar el where si se quiere ver todas las sesion incluidas la del gestor)
+*/
+
+SELECT datid, pid, usename, datname FROM pg_stat_activity WHERE datname = 'postgres';
+
+/*
 A partir de este archivo comenzaré haciendo,uso de solo ficheros sql, en consola para ejecutar
 estos mismos lo siguiente:
 
