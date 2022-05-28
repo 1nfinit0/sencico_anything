@@ -88,6 +88,9 @@ SELECT current_user;
 /*
     Listar sesiones activas  en una determinada base de datos
     (no colocar el where si se quiere ver todas las sesion incluidas la del gestor)
+    Cuando ejecutamos querys dentro desde pgadmin cada ventana de query representa una sesion
+    para ejecutar comandos, tener en cuenta que esto podría malo para el rendimiento de la base de datos
+    por que cada sesión se guarda temporalmente en memoria ram.
 */
 
 SELECT datid, pid, usename, datname FROM pg_stat_activity WHERE datname = 'postgres';

@@ -23,7 +23,7 @@ user = "dbatobi"
 password = "posttobi"
 
 """
-    Conexión con psycopg2
+    -------------------------- Conexión con psycopg2 --------------------------
 """
 try: # Apartir de aquí se define la conexión (lo hacemos con try y except para si no funciona capturar el error)
     connection = psycopg2.connect(
@@ -36,12 +36,12 @@ try: # Apartir de aquí se define la conexión (lo hacemos con try y except para
     print("\nConexión con psycopg2 a Postgresql realizada con éxito\n") # Esto hará si la conexión es exitosa
 except Exception as e: # Esto define el comportamiento si falla la conexión
     print("Error al conectar con PostgreSQL: ", e) # Esto hará si falla
-finally: # Esto hará siempre porque tiene que cerrar la conexión o se generarán varias sesion en psql (revisar )
+finally: # Esto hará siempre porque tiene que cerrar la conexión o se generarán varias sesion en psql (revisar ../sql/1_psql.sql)
     if connection:
         connection.close()
 
 """
-    Conexión con sqlalchemy
+    -------------------------- Conexión con sqlalchemy --------------------------
 """
 try: # Apartir de aquí se define la conexión
     engine = create_engine(
@@ -50,7 +50,7 @@ try: # Apartir de aquí se define la conexión
     print("\nConexión con sqlalchemy a Postgresql realizada con éxito\n") # Esto hará si la conexión es exitosa
 except Exception as e: # Esto define el comportamiento si falla la conexión
     print("Error al conectar con PostgreSQL: ", e) # Esto hará si falla
-finally: # Esto hará siempre porque tiene que cerrar la conexión o se generarán varias sesion en psql (revisar )
+finally: # Esto hará siempre porque tiene que cerrar la conexión o se generarán varias sesion en psql (revisar ../sql/1_psql.sql)
     if connection:
         connection.close()
 
