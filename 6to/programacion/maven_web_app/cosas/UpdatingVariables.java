@@ -6,6 +6,14 @@ public class UpdatingVariables {
         salary = salary + 200;
         //Nombre del empleado
         String employeeName = "Juan";
-        System.out.println("Salario: "+ salary+" Nombre: "+employeeName);
+        //Descuento de $50
+        salary = salary - 50;
+        //2 horas extra por $30 cada una 
+        //comida = - $45
+        salary = salary + (30 * 2) - 45;
+        employeeName = employeeName + " Delgado Valverde";
+        employeeName = "José " + employeeName;
+        System.out.println("El nombre del empleado es: " + employeeName);
+
     }
 }

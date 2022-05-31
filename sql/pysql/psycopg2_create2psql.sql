@@ -1,7 +1,4 @@
--- Se posiciona en la base de datos tobi
-\c tobi;
-
--- Crea la tabla 
+-- Crea la tabla:
 DROP TABLE IF EXISTS prueba.persona_psycopg2;
 CREATE TABLE prueba.persona_psycopg2 (
     id serial PRIMARY KEY,
@@ -9,6 +6,7 @@ CREATE TABLE prueba.persona_psycopg2 (
     apellido varchar(50) NOT NULL,
     edad integer NOT NULL
 );
+-- Rellena la tabla:
 INSERT INTO prueba.persona_psycopg2 (nombre, apellido, edad) VALUES
 ('Juan', 'Perez', 25),
 ('Pedro', 'Perez', 30),
