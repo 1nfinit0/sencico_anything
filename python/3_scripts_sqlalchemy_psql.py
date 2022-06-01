@@ -10,7 +10,6 @@ Descripción: Crearemos, leeremos, actualizaremos y borraremos registros en post
 """
 # Importar librerías
 from sqlalchemy import create_engine
-from sqlalchemy import text
 import pandas as pd
 
 # Definimos las variables de conexión
