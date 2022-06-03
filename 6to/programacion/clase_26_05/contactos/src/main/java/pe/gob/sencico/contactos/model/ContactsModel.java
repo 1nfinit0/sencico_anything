@@ -1,37 +1,20 @@
-package pe.gob.sencico.contactos.entity;
+package pe.gob.sencico.contactos.model;
 
-import java.io.Serializable;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table(name="contacts", schema = "public")
-public class Contacts implements Serializable{
-
-    private static final long serialVersionUID = -4225106069213165072L;
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class ContactsModel {
     private Long id;
-
-    @Column(name = "first_name")
     private String firstName;
-
-    @Column(name = "last_name")
     private String lastName;
-
-    @Column(name = "phone_number")
     private String phoneNumber;
-
-    @Column(name = "email_address")
     private String emailAddress;
 
-    public Contacts() {
+    public ContactsModel() {}
+
+    public ContactsModel(Long id, String firstName, String lastName, String phoneNumber, String emailAddress) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phoneNumber = phoneNumber;
+        this.emailAddress = emailAddress;
     }
 
     public Long getId() {
@@ -72,5 +55,7 @@ public class Contacts implements Serializable{
 
     public void setEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
-    }    
+    }
+
+    
 }
