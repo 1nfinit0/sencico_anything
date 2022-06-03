@@ -1,12 +1,13 @@
 package pe.gob.sencico.contactos.model;
 
 public class ContactsModel {
+
     private Long id;
     private String firstName;
     private String lastName;
     private String phoneNumber;
     private String emailAddress;
-
+    
     public ContactsModel() {}
 
     public ContactsModel(Long id, String firstName, String lastName, String phoneNumber, String emailAddress) {
@@ -56,6 +57,5 @@ public class ContactsModel {
     public void setEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
     }
-
     
 }

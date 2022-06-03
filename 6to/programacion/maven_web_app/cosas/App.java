@@ -16,7 +16,7 @@ public class App {
         System.out.println(totalSalary);
 
         var employeeName = "Luis";
-        System.out.println("Employee name: " + employeeName + " " + totalSalary);
+        System.out.println("Employee name: " + employeeName + " " + name +totalSalary+" Otras variables: "+ñ+nD+nF+c+b+n);
 
     }
 }

@@ -7,13 +7,16 @@ public class NamingJava {
         System.out.println(cellphone);
         System.out.println(cellPhone);
 
+        //También puede empezar con _ $
         String $countryName = "Lima";
         String _countryName = "Piura";
         System.out.println($countryName);
         System.out.println(_countryName);
 
-        int POSITION = 1;
-        int MAX_WIDTH = 99999;
-        int MIN_WIDTH = 0;
+        //Constantes todas en mayúsuclas
+        final int POSITION = 1;
+        final int MAX_WIDTH = 99999;
+        final int MIN_WIDTH = 0;
+        System.out.println(POSITION+MAX_WIDTH+MIN_WIDTH);
     }
 }

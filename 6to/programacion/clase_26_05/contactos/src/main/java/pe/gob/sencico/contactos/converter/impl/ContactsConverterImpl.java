@@ -7,7 +7,8 @@ import pe.gob.sencico.contactos.entity.Contacts;
 import pe.gob.sencico.contactos.model.ContactsModel;
 
 @Component("contactsConverter")
-public class ContactsConverterImpl implements ContactsConverter {
+public class ContactsConverterImpl implements ContactsConverter{
+
     @Override
     public Contacts aEntity(ContactsModel model) {
         Contacts entity = new Contacts();
@@ -18,6 +19,7 @@ public class ContactsConverterImpl implements ContactsConverter {
         entity.setEmailAddress(model.getEmailAddress());
         return entity;
     }
+
     @Override
     public ContactsModel aModel(Contacts entity) {
         ContactsModel model = new ContactsModel();
@@ -28,4 +30,5 @@ public class ContactsConverterImpl implements ContactsConverter {
         model.setEmailAddress(entity.getEmailAddress());
         return model;
     }
+
 }
