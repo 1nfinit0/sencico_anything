@@ -1,0 +1,61 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    font-weight: bold;
+    list-style: none;
+    height: 100vh;
+    background-color: #1f2335;
+    /* background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0.6) 100%) center center / cover no-repeat fixed, url("/img/spencer-moore_desert-min.webp");
+    background-repeat: no-repeat;
+    background-position: center center; */
+    font-family: 'Raleway', sans-serif;
+}
+body {
+    height: 100%;   
+    display: flex;
+    flex-direction: column;
+}
+header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+header h1 {
+    font-size: 6rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: bold;
+    color: #82DDFF;
+}
+header p {
+    padding-top: 20px;
+    color: #82DDFF;
+    width: 70%;
+    font-size: 1.4rem;
+    align-self: center;
+    text-align: center;
+    letter-spacing: 1px;
+}
+main, #map {
+    height: 100%;
+    width: 70%;
+    max-width: 700px;
+}
+main {
+    height: 500px;
+    background-color: #414a4380;
+    display: flex;
+    align-self: center;
+}
+#map{
+    width: 100%;
+    margin: 0 auto;
+    border: 3px solid gray;
+}

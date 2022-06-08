@@ -5,10 +5,12 @@ var map = L.map('map', {
     zoom: 5
 });
 
-var defaultBase = L.tileLayer.provider('OpenStreetMap').addTo(map);
+// var defaultBase = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png').addTo(map);
+var defaultBase = L.tileLayer.provider('CartoDB.DarkMatter').addTo(map);
 
 var baseLayers = {
-    'Streets': defaultBase,
+    'Dark Matter': defaultBase,
+    'OpenStreetMap': L.tileLayer.provider('OpenStreetMap'),
     'OpenTopoMap': L.tileLayer.provider('OpenTopoMap'),
     'EsriWorldPhysical': L.tileLayer.provider('Esri.WorldPhysical'),
     'EsriWorldImagery': L.tileLayer.provider('Esri.WorldImagery')
@@ -76,7 +78,20 @@ var layer010 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_00_0
     transparent: true,
     tiled: 'true'
 });
+
+//GeoJson
+var layer011 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_00_06/wms', 
+    {
+    layers: 'g_00_06:00_06_001_03_000_000_0000_00_00',
+    format: 'image/png',
+    transparent: true,
+    tiled: 'true'
+});
+
 var groupOverLays = {
+    "Json": {
+        "aCuencas"   : layer011
+    },
     "Mapa Base": {
         "Departamentos ": layer001,
         "Provincias"    : layer002,

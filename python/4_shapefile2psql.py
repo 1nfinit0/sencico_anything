@@ -31,14 +31,25 @@ def upShapefile2psql(shapefile, table_name, schema_name):
         engine = create_engine(db_connection_url) # Creamos el motor de conección
         gdf = gpd.read_file(shapefile) # Leemos el archivo shape
         gdf = gdf.to_crs("EPSG:4326") # Convertimos el archivo shape a coordenadas de referencia WGS84
-        gdf.dtypes
-        gdf.columns = ['ubigeo','distrito','provincia','departamento','poblacion','superficie','geometry']
-        #gdf.columns = ['codigo_pos','capitales','distritos','provincia','departamen','geometry']
         gdf.to_postgis(if_exists='replace', schema=schema_name, name=table_name, con=engine) # Subimos el archivo shape a postgresql
         print("\nShapefile subido a postgresql con éxito\n")
     except Exception as e:
         print("Log: ", e)
 
 # Ejecución de la función
-upShapefile2psql('../files/shapefiles/ubigeo_inei/geodir_ubigeo_inei.shp', 'geodir_codigo_postal', 'prueba')
+upShapefile2psql('../files/shapefiles/ubigeo_inei/geodir_ubigeo_inei.shp', 'geodir_ubigeo_inei', 'prueba')
 
+"""
+    Aquí existe una excepción CON ESTE ARCHIVO ya que con el anterior si sube pero este no, existen
+    posibles causas que pueden ser:
+        - Existe geometría superpuesta en el archivo (no es posible ya que el archivo de inei también las tiene pero si sube)
+        - Tiene geometría no valida (También no es posible ya que el archivo de inei también las tiene y aún así sube)
+        - Cuando tenga otra idea la pondré aquí
+        - El encoding no es utf-8 (causa probable)
+
+    Para subir el archivo de todas formas usar la herramienta shp2pgsql de postgis (su uso está en ../sql/6_shp2pgsql.sh)
+    NOTA: Al subir este archivo se usó shp2pgsql -W "LATIN1" si no pues no sube xd (Quizá ese sea el problema)
+    shp2pgsql -s 4326 -I -d -g geom -W "LATIN1" ../files/shapefiles/cod_postal/geodir_cod_postal.shp prueba.geodir_cod_postal | psql -d tobi -U dbatobi -W
+"""
+
+#upShapefile2psql('../files/shapefiles/cod_postal/geodir_cod_postal.shp', 'geodir_cod_postal', 'prueba')
