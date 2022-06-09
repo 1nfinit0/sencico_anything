@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+    <file>
+        <wms>CAMBIO DE PRECIPITACIÓN 2050 - ANUAL</wms>
+    </file>
+    <file>
+        <wms>CAMBIO DE PRECIPITACIÓN 2050 - VERANO</wms>
+    </file>
+    <file>
+        <wms>CAMBIO DE PRECIPITACIÓN 2050 - OTOÑO</wms>
+    </file>
+    <file>
+        <wms>CAMBIO DE PRECIPITACIÓN 2050 - INVIERNO</wms>
+    </file>
+    <file>
+        <wms>CAMBIO DE PRECIPITACIÓN 2050 - PRIMAVERA</wms>
+    </file>
+    <file>
+        <wms>CAMBIO DE TEMPERATURA MÍNIMA 2050 - ANUAL</wms>
+    </file>
+    <file>
+        <wms>CAMBIO DE TEMPERATURA MÍNIMA 2050 - VERANO</wms>
+    </file>
+    <file>
+        <wms>CAMBIO DE TEMPERATURA MÍNIMA 2050 - OTOÑO</wms>
+    </file>
+    <file>
+        <wms>CAMBIO DE TEMPERATURA MÍNIMA 2050 - INVIERNO</wms>
+    </file>
+    <file>
+        <wms>CAMBIO DE TEMPERATURA MÍNIMA 2050 - PRIMAVERA</wms>
+    </file>
+    <file>
+        <wms>CAMBIO DE TEMPERATURA MÁXIMA 2050 - ANUAL</wms>
+    </file>
+    <file>
+        <wms>CAMBIO DE TEMPERATURA MÁXIMA 2050 - VERANO</wms>
+    </file>
+    <file>
+        <wms>CAMBIO DE TEMPERATURA MÁXIMA 2050 - OTOÑO</wms>
+    </file>
+    <file>
+        <wms>CAMBIO DE TEMPERATURA MÁXIMA 2050 - INVIERNO</wms>
+    </file>
+    <file>
+        <wms>CAMBIO DE TEMPERATURA MÁXIMA 2050 - PRIMAVERA</wms>
+    </file>
+    <file>
+        <wms>TENDENCIA DE TEMP MAXIMA 01 ENERO - PERU</wms>
+    </file>
+    <file>
+        <wms>TENDENCIA DE TEMP MAXIMA 02 FEBRERO - PERU</wms>
+    </file>
+    <file>
+        <wms>TENDENCIA DE TEMP MAXIMA 03 MARZO - PERU</wms>
+    </file>
+    <file>
+        <wms>TENDENCIA DE TEMP MAXIMA 04 ABRIL - PERU</wms>
+    </file>
+    <file>
+        <wms>TENDENCIA DE TEMP MAXIMA 05 MAYO - PERU </wms>
+    </file>
+    <file>
+        <wms>TENDENCIA DE TEMP MAXIMA 06 JUNIO - PERU</wms>
+    </file>
+    <file>
+        <wms>TENDENCIA DE TEMP MAXIMA 07 JULIO - PERU</wms>
+    </file>
+</data>

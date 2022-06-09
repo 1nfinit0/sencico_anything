@@ -79,19 +79,7 @@ var layer010 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_00_0
     tiled: 'true'
 });
 
-//GeoJson
-var layer011 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_00_06/wms', 
-    {
-    layers: 'g_00_06:00_06_001_03_000_000_0000_00_00',
-    format: 'image/png',
-    transparent: true,
-    tiled: 'true'
-});
-
 var groupOverLays = {
-    "Json": {
-        "aCuencas"   : layer011
-    },
     "Mapa Base": {
         "Departamentos ": layer001,
         "Provincias"    : layer002,
