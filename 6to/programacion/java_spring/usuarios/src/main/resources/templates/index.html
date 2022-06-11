@@ -1,36 +1,97 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
-        <title>Contactos</title>
+        <title>Usuarios</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.5">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link th:href="@{/css/style.css}" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            html {
+                font-size: 62.5%;
+                font-weight: bold;
+                list-style: none;
+                height: 100vh;
+                background-color: #1f2335;
+                font-family: 'Raleway', sans-serif;
+            }
+            body {
+                height: 100%;   
+                display: flex;
+                flex-direction: column;
+            }
+            body header {
+                width: 100%;
+                height: 4.5rem;
+                display: flex;
+                flex-direction: column;
+                padding: 50px;
+                
+            }
+            body main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            body main h1 {
+                font-size: 6rem;
+                font-weight: bold;
+                text-transform: capitalize;
+                text-align: center;
+                font-weight: bold;
+                color: #82DDFF;
+                margin-bottom: 20px;
+            }
+            body main table {
+                width: 50%;
+                margin-top: 20px;
+                border: 1px solid #82DDFF;
+                border-radius: 10px;
+            }
+        </style>
     </head>
     <body>
-        <h2>Lista de Usuarios</h2>
-        <table class="table" border>
-            <thead>
-                <tr>
-                    <td colspan="3">
-                        <a th:href="@{/home/add}">
-                            <button type="button" class="btn btn-primary">Nuevo</button>
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="col">First Name</th>
-                    <th scope="col">Last Name</th>
-                    <th scope="col">Email Address</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr th:each="fila:${usuario}">
-                    <td th:text="${fila.name}"></td>
-                    <td th:text="${fila.lastName}"></td>
-                    <td th:text="${fila.email}"></td>
-                </tr>
-            </tbody>
-        </table>
+        <header>
+
+        </header>
+        <main>
+            <h1>Luis Huatay</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email Address</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="fila:${usuario}">
+                        <td th:text="${fila.name}"></td>
+                        <td th:text="${fila.lastName}"></td>
+                        <td th:text="${fila.email}"></td>
+                        <td><a href="#" th:href="@{/home/edit/__${fila.id}__/}"><button type="button" class="btn btn-info">update</button></a></td>
+                        <td><a href="#" th:href="@{/home/delete/__${fila.id}__/}"><button type="button" class="btn btn-danger">delete</button></a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <ul>
+                <li>
+                    <a th:href="@{/home/add}">
+                        <button type="button" class="btn btn-primary">Nuevo</button>
+                    </a>
+                </li>
+            </ul>
+        </main>
+        <footer>
+
+        </footer>
     </body>
 </html>

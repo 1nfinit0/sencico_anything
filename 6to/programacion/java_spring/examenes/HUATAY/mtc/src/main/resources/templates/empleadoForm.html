@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Contactos</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href="#" th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="jumbotron text-center">
+                <h1>Empleados MTC</h1>
+                <p>Ministerio de transportes y Comunicaciónes</p>
+            </div>
+            <div class="row" style="min-width: 500px;">
+                <div class="col-sm-5" style="max-width: 275px;">&nbsp;</div>
+                <div class="col-sm-2" style="min-width: 500px;">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <img class="card-img-top" th:src="@{https://euipo.europa.eu/tunnel-web/secure/webdav/guest/document_library/Help_images/user_area/user-area_euipo.jpg}" alt="Card image cap">
+                                <h5 class="card-title">Datos del Contacto:</h5>
+                            </div>
+                            <div class="card-body">
+                                <form action="#" method="post" th:action="@{/save}" th:object="${empleado}">
+                                    <input type="hidden" th:field="*{gid}" th:value="${gid}"></input>
+
+                                    <ul class="list-group list-group-flush">
+                                        <div class="form-group">
+                                            <label for="nombre">First Name</label>
+                                            <input type="text" th:field="*{nombre}" th:value="${nombre}" id="firstName" class="form-control" placeholder="Enter First Name">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="aPaterno">Last Name</label>
+                                            <input type="text" th:field="*{aPaterno}" th:value="${aPaterno}" id="aPaterno" class="form-control" placeholder="Enter Last Name">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="aMaterno">Second Last Name</label>
+                                            <input type="text" th:field="*{aMaterno}" th:value="${aMaterno}" id="aMaterno" class="form-control" placeholder="Enter Second Last Name">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="dni">DNI</label>
+                                            <input type="text" th:field="*{dni}" th:value="${dni}" id="phoneNumber" class="form-control" placeholder="Enter DNI">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="telefono">Phone Number</label>
+                                            <input type="text" th:field="*{telefono}" th:value="${telefono}" id="phoneNumber" class="form-control" placeholder="Enter Phone Number">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="correo">Email Address</label>
+                                            <input type="text" th:field="*{correo}" th:value="${correo}" id="emailAddress" class="form-control" placeholder="Enter Email Address">
+                                        </div>
+                                    </ul>
+                                    <div class="text-center">
+                                        <input type="submit" class="btn btn-primary" th:value="Enviar">
+                                        <button type="submit" class="btn btn-info" th:href="@{/show}">Cancel</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-5">&nbsp;</div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
-        <title>Contactos</title>
+        <title>Huatay</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,8 +10,8 @@
     <body>
         <div class="container-fluid">
             <div class="jumbotron text-center">
-                <h1>Contactos SENCICO</h1>
-                <p>Servicio Nacional de Capacitación para la Industria de la Construcción</p>
+                <h1>Tabla de empleados</h1>
+                <p>Ministerio de Transportes y Comunicaciónes</p>
             </div>
 
             <div class="container-xxl bd-gutter">
@@ -27,28 +27,32 @@
                         <table class="table  table-striped">
                             <thead>
                                 <tr>
-                                    <th scope="col">First Name</th>
-                                    <th scope="col">Last Name</th>
-                                    <th scope="col">Phone Number</th>
-                                    <th scope="col">Email Address</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Apellido Parterno</th>
+                                    <th scope="col">Apellido Materno</th>
+                                    <th scope="col">DNI</th>
+                                    <th scope="col">Teléfono</th>
+                                    <th scope="col">Correo</th>
                                     <th scope="col">Update</th>
                                     <th scope="col">Delete</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr th:each="fila:${contacts}">
-                                    <td th:text="${fila.firstName}"></td>
-                                    <td th:text="${fila.lastName}"></td>
-                                    <td th:text="${fila.phoneNumber}"></td>
-                                    <td th:text="${fila.emailAddress}"></td>
-                                    <td><a href="#" th:href="@{/home/edit/__${fila.id}__/}"><button type="button" class="btn btn-info">update</button></a></td>
-                                    <td><a href="#" th:href="@{/home/delete/__${fila.id}__/}"><button type="button" class="btn btn-danger">delete</button></a></td>
+                                <tr th:each="fila:${empleado}">
+                                    <td th:text="${fila.nombre}"></td>
+                                    <td th:text="${fila.aPaterno}"></td>
+                                    <td th:text="${fila.aMaterno}"></td>
+                                    <td th:text="${fila.dni}"></td>
+                                    <td th:text="${fila.telefono}"></td>
+                                    <td th:text="${fila.correo}"></td>
+                                    <td><a href="#" th:href="@{/edit/__${fila.gid}__/}"><button type="button" class="btn btn-info">update</button></a></td>
+                                    <td><a href="#" th:href="@{/delete/__${fila.gid}__/}"><button type="button" class="btn btn-danger">delete</button></a></td>
                                 </tr>
                             </tbody>
                             <tfoot>
                                 <tr>
                                     <td colspan="6">
-                                        <a th:href="@{/home/add}">
+                                        <a th:href="@{/add}">
                                             <button type="button" class="btn btn-primary">Nuevo</button>
                                         </a>
                                     </td>
