@@ -6,7 +6,7 @@ $(document).ready(function () {
 function showFoodMenu() {
     $.ajax({
         type: "GET",
-        url: "../../assets/capas.xml",
+        url: "../../XML/capas.xml",
         dataType: "xml",
         error: function (e) {
             alert("Se produjo un error al procesar el archivo XML");
@@ -14,12 +14,9 @@ function showFoodMenu() {
         },
         success: function (response) {
             $("ul").children().remove();
-            $(response).find("file").each(function () {
-                let fila = $('<tr>');
-                fila.append($(`<td>${$(this).find('wms').text()}</td>`));
-                fila.append($(`<td>${$(this).find('url').text()}</td>`));
-
-                $('tbody').append(fila);
+            $(response).find("map").each(function () {
+                var _name = '' + $(this).find('wms').text();
+                $("ul").append('<li>' + _name + '</li>');
             });
         }
     });

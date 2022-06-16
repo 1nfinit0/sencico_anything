@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+    <map>
+        <wms>CAMBIO DE PRECIPITACIÓN 2050 - ANUAL</wms>
+    </map>
+    <map>
+        <wms>CAMBIO DE PRECIPITACIÓN 2050 - VERANO</wms>
+    </map>
+    <map>
+        <wms>CAMBIO DE PRECIPITACIÓN 2050 - OTOÑO</wms>
+    </map>
+    <map>
+        <wms>CAMBIO DE PRECIPITACIÓN 2050 - INVIERNO</wms>
+    </map>
+    <map>
+        <wms>CAMBIO DE PRECIPITACIÓN 2050 - PRIMAVERA</wms>
+    </map>
+    <map>
+        <wms>CAMBIO DE TEMPERATURA MÍNIMA 2050 - ANUAL</wms>
+    </map>
+    <map>
+        <wms>CAMBIO DE TEMPERATURA MÍNIMA 2050 - VERANO</wms>
+    </map>
+    <map>
+        <wms>CAMBIO DE TEMPERATURA MÍNIMA 2050 - OTOÑO</wms>
+    </map>
+    <map>
+        <wms>CAMBIO DE TEMPERATURA MÍNIMA 2050 - INVIERNO</wms>
+    </map>
+    <map>
+        <wms>CAMBIO DE TEMPERATURA MÍNIMA 2050 - PRIMAVERA</wms>
+    </map>
+    <map>
+        <wms>CAMBIO DE TEMPERATURA MÁXIMA 2050 - ANUAL</wms>
+    </map>
+    <map>
+        <wms>CAMBIO DE TEMPERATURA MÁXIMA 2050 - VERANO</wms>
+    </map>
+    <map>
+        <wms>CAMBIO DE TEMPERATURA MÁXIMA 2050 - OTOÑO</wms>
+    </map>
+    <map>
+        <wms>CAMBIO DE TEMPERATURA MÁXIMA 2050 - INVIERNO</wms>
+    </map>
+    <map>
+        <wms>CAMBIO DE TEMPERATURA MÁXIMA 2050 - PRIMAVERA</wms>
+    </map>
+    <map>
+        <wms>TENDENCIA DE TEMP MAXIMA 01 ENERO - PERU</wms>
+    </map>
+    <map>
+        <wms>TENDENCIA DE TEMP MAXIMA 02 FEBRERO - PERU</wms>
+    </map>
+    <map>
+        <wms>TENDENCIA DE TEMP MAXIMA 03 MARZO - PERU</wms>
+    </map>
+    <map>
+        <wms>TENDENCIA DE TEMP MAXIMA 04 ABRIL - PERU</wms>
+    </map>
+    <map>
+        <wms>TENDENCIA DE TEMP MAXIMA 05 MAYO - PERU </wms>
+    </map>
+    <map>
+        <wms>TENDENCIA DE TEMP MAXIMA 06 JUNIO - PERU</wms>
+    </map>
+    <map>
+        <wms>TENDENCIA DE TEMP MAXIMA 07 JULIO - PERU</wms>
+    </map>
+    <map>
+        <wms>RIESGO AGROCLIMATICO DE CAFE</wms>
+    </map>
+    <map>
+        <wms>RIESGO AGROCLIMATICO DE CACAO</wms>
+    </map>
+    <map>
+        <wms>RIESGO AGROCLIMATICO DE PAPA</wms>
+    </map>
+    <map>
+        <wms>RIESGO AGROCLIMATICO DE MAIZ</wms>
+    </map>
+    <map>
+        <wms>RIESGO AGROCLIMATICO DE ARROZ</wms>
+    </map>
+    <map>
+        <wms>RIESGO AGROCLIMATICO DE PASTO</wms> 
+    </map>
+    <map>
+        <wms>RIESGO AGROCLIMATICO DE FRIJOL GRANO SECO</wms>
+    </map>
+    <map>
+        <wms>RIESGO AGROCLIMATICO DE CEBOLLA</wms>
+    </map>
+    <map>
+        <wms>RIESGO AGROCLIMATICO DE PALTO</wms>
+    </map>
+    <map>
+        <wms>RIESGO AGROCLIMATICO DE QUINUA</wms>
+    </map>
+    <map>
+        <wms>LÍMITE DEL DEPARTAMENTO PERÚ</wms>
+    </map>
+    <map>
+        <wms>LÍMITE DE PROVINCIA PERÚ</wms>
+    </map>
+    <map>
+        <wms>CUENCAS HIDROGRÁFICAS PERÚ</wms>
+    </map>
+    <map>
+        <wms>HIDROGRAFÍA PERÚ</wms>
+    </map>
+    <map>
+        <wms>LAGOS PERÚ</wms>
+    </map>
+</xml>

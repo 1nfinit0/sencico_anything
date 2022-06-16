@@ -2,68 +2,150 @@
 <data>
     <file>
         <wms>CAMBIO DE PRECIPITACIÓN 2050 - ANUAL</wms>
+        <url>g_06_13:06_13_001_03_001_513_0000_00_00</url>
     </file>
     <file>
         <wms>CAMBIO DE PRECIPITACIÓN 2050 - VERANO</wms>
+        <url>g_06_13:06_13_002_03_001_513_0000_00_00</url>
     </file>
     <file>
         <wms>CAMBIO DE PRECIPITACIÓN 2050 - OTOÑO</wms>
+        <url>g_06_13:06_13_003_03_001_513_0000_00_00</url>
     </file>
     <file>
         <wms>CAMBIO DE PRECIPITACIÓN 2050 - INVIERNO</wms>
+        <url>g_06_13:06_13_004_03_001_513_0000_00_00</url>
     </file>
     <file>
         <wms>CAMBIO DE PRECIPITACIÓN 2050 - PRIMAVERA</wms>
+        <url>g_06_13:06_13_005_03_001_513_0000_00_00</url>
     </file>
     <file>
         <wms>CAMBIO DE TEMPERATURA MÍNIMA 2050 - ANUAL</wms>
+        <url>g_06_13:06_13_006_03_001_513_0000_00_00</url>
     </file>
     <file>
         <wms>CAMBIO DE TEMPERATURA MÍNIMA 2050 - VERANO</wms>
+        <url>g_06_13:06_13_007_03_001_513_0000_00_00</url>
     </file>
     <file>
         <wms>CAMBIO DE TEMPERATURA MÍNIMA 2050 - OTOÑO</wms>
+        <url>g_06_13:06_13_008_03_001_513_0000_00_00</url>
     </file>
     <file>
         <wms>CAMBIO DE TEMPERATURA MÍNIMA 2050 - INVIERNO</wms>
+        <url>g_06_13:06_13_009_03_001_513_0000_00_00</url>
     </file>
     <file>
         <wms>CAMBIO DE TEMPERATURA MÍNIMA 2050 - PRIMAVERA</wms>
+        <url>g_06_13:06_13_010_03_001_513_0000_00_00</url>
     </file>
     <file>
         <wms>CAMBIO DE TEMPERATURA MÁXIMA 2050 - ANUAL</wms>
+        <url>g_06_13:06_13_011_03_001_513_0000_00_00</url>
     </file>
     <file>
         <wms>CAMBIO DE TEMPERATURA MÁXIMA 2050 - VERANO</wms>
+        <url>g_06_13:06_13_012_03_001_513_0000_00_00</url>
     </file>
     <file>
         <wms>CAMBIO DE TEMPERATURA MÁXIMA 2050 - OTOÑO</wms>
+        <url>g_06_13:06_13_013_03_001_513_0000_00_00</url>
     </file>
     <file>
         <wms>CAMBIO DE TEMPERATURA MÁXIMA 2050 - INVIERNO</wms>
+        <url>g_06_13:06_13_014_03_001_513_0000_00_00</url>
     </file>
     <file>
         <wms>CAMBIO DE TEMPERATURA MÁXIMA 2050 - PRIMAVERA</wms>
+        <url>g_06_13:06_13_015_03_001_513_0000_00_00</url>
     </file>
     <file>
         <wms>TENDENCIA DE TEMP MAXIMA 01 ENERO - PERU</wms>
+        <url>g_06_13:06_13_016_03_001_513_0000_00_00</url>
     </file>
     <file>
         <wms>TENDENCIA DE TEMP MAXIMA 02 FEBRERO - PERU</wms>
+        <url>g_06_13:06_13_017_03_001_513_0000_00_00</url>
     </file>
     <file>
         <wms>TENDENCIA DE TEMP MAXIMA 03 MARZO - PERU</wms>
+        <url>g_06_13:06_13_018_03_001_513_0000_00_00</url>
     </file>
     <file>
         <wms>TENDENCIA DE TEMP MAXIMA 04 ABRIL - PERU</wms>
+        <url>g_06_13:06_13_019_03_001_513_0000_00_00</url>
     </file>
     <file>
         <wms>TENDENCIA DE TEMP MAXIMA 05 MAYO - PERU </wms>
+        <url>g_06_13:06_13_020_03_001_513_0000_00_00</url>
     </file>
     <file>
         <wms>TENDENCIA DE TEMP MAXIMA 06 JUNIO - PERU</wms>
+        <url>g_06_13:06_13_021_03_001_513_0000_00_00</url>
     </file>
     <file>
         <wms>TENDENCIA DE TEMP MAXIMA 07 JULIO - PERU</wms>
+        <url>g_06_13:06_13_022_03_001_513_0000_00_00</url>
+    </file>
+    <file>
+        <wms>RIESGO AGROCLIMATICO DE CAFE</wms>
+        <url>g_06_13:06_13_023_03_001_513_0000_00_00</url>
+    </file>
+    <file>
+        <wms>RIESGO AGROCLIMATICO DE CACAO</wms>
+        <url>g_06_13:06_13_024_03_001_513_0000_00_00</url>
+    </file>
+    <file>
+        <wms>RIESGO AGROCLIMATICO DE PAPA</wms>
+        <url>g_06_13:06_13_025_03_001_513_0000_00_00</url>
+    </file>
+    <file>
+        <wms>RIESGO AGROCLIMATICO DE MAIZ</wms>
+        <url>g_06_13:06_13_026_03_001_513_0000_00_00</url>
+    </file>
+    <file>
+        <wms>RIESGO AGROCLIMATICO DE ARROZ</wms>
+        <url>g_06_13:06_13_027_03_001_513_0000_00_00</url>
+    </file>
+    <file>
+        <wms>RIESGO AGROCLIMATICO DE PASTO</wms> 
+        <url>g_06_13:06_13_028_03_001_513_0000_00_00</url>
+    </file>
+    <file>
+        <wms>RIESGO AGROCLIMATICO DE FRIJOL GRANO SECO</wms>
+        <url>g_06_13:06_13_029_03_001_513_0000_00_00</url>
+    </file>
+    <file>
+        <wms>RIESGO AGROCLIMATICO DE CEBOLLA</wms>
+        <url>g_06_13:06_13_030_03_001_513_0000_00_00</url>
+    </file>
+    <file>
+        <wms>RIESGO AGROCLIMATICO DE PALTO</wms>
+        <url>g_06_13:06_13_031_03_001_513_0000_00_00</url>
+    </file>
+    <file>
+        <wms>RIESGO AGROCLIMATICO DE QUINUA</wms>
+        <url>g_06_13:06_13_032_03_001_513_0000_00_00</url>
+    </file>
+    <file>
+        <wms>LÍMITE DEL DEPARTAMENTO PERÚ</wms>
+        <url>g_06_13:06_13_033_03_001_513_0000_00_00</url>
+    </file>
+    <file>
+        <wms>LÍMITE DE PROVINCIA PERÚ</wms>
+        <url>g_06_13:06_13_034_03_001_513_0000_00_00</url>
+    </file>
+    <file>
+        <wms>CUENCAS HIDROGRÁFICAS PERÚ</wms>
+        <url>g_06_13:06_13_035_03_001_513_0000_00_00</url>
+    </file>
+    <file>
+        <wms>HIDROGRAFÍA PERÚ</wms>
+        <url>g_06_13:06_13_036_03_001_513_0000_00_00</url>
+    </file>
+    <file>
+        <wms>LAGOS PERÚ</wms>
+        <url>g_06_13:06_13_037_03_001_513_0000_00_00</url>
     </file>
 </data>

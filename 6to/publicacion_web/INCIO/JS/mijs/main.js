@@ -2,15 +2,12 @@ var boundary = [-81.3899688720703, -18.4412956237793, -68.5886001586914, 0.02985
 
 var map = L.map('map', {
     center: [(boundary[1] + boundary[3]) / 2, (boundary[0] + boundary[2]) / 2],
-    zoom: 5
+    zoom: 6
 });
 
-// var defaultBase = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png').addTo(map);
-var defaultBase = L.tileLayer.provider('CartoDB.DarkMatter').addTo(map);
-
+var defaultBase = L.tileLayer.provider('OpenStreetMap').addTo(map);
 var baseLayers = {
-    'Dark Matter': defaultBase,
-    'OpenStreetMap': L.tileLayer.provider('OpenStreetMap'),
+    'Streets': defaultBase,
     'OpenTopoMap': L.tileLayer.provider('OpenTopoMap'),
     'EsriWorldPhysical': L.tileLayer.provider('Esri.WorldPhysical'),
     'EsriWorldImagery': L.tileLayer.provider('Esri.WorldImagery')
@@ -275,6 +272,7 @@ var layer037 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_00_0
     transparent: true,
     tiled: 'true'
 });
+
 var groupOverLays = {
     "Cambio de Precipitación": {
         "2050 - ANUAL": layer001,
@@ -307,29 +305,31 @@ var groupOverLays = {
         "07 JULIO - PERÚ" : layer022
     },
     "Riesgo Agroclimático": {
-        "Café" : layer023,
-        "Cacao" : layer024,
-        "Papa" : layer025,
-        "Maiz" : layer026,
-        "Arroz" : layer027,
-        "Pasto" : layer028,
-        "Frijol grano seco" : layer029,
-        "Cebolla" : layer030,
-        "Palto" : layer031,
-        "Quinua" : layer032
+        "RIESGO AGROCLIMATICO DE CAFE" : layer023,
+        "RIESGO AGROCLIMATICO DE CACAO" : layer024,
+        "RIESGO AGROCLIMATICO DE PAPA" : layer025,
+        "RIESGO AGROCLIMATICO DE MAIZ" : layer026,
+        "RIESGO AGROCLIMATICO DE ARROZ" : layer027,
+        "RIESGO AGROCLIMATICO DE PASTO" : layer028,
+        "RIESGO AGROCLIMATICO DE FRIJOL GRANO SECO" : layer029,
+        "RIESGO AGROCLIMATICO DE CEBOLLA" : layer030,
+        "RIESGO AGROCLIMATICO DE PALTO" : layer031,
+        "RIESGO AGROCLIMATICO DE QUINUA" : layer032
     },
     "Límites": {
-        "Límite departamental" : layer033,
-        "Límite de provincia" : layer034
+        "LIMITE DE DEPARTAMENTO - PERU" : layer033,
+        "LIMITE DE PROVINCIA - PERU" : layer034
     },
     "Hidrografía": {
-        "Cuencas Hidrográficas" : layer035,
-        "Hidrografía" : layer036,
-        "Lagos" : layer037
+        "CUENCAS HIDROGRAFICAS - PERU" : layer035,
+        "HIDROGRAFIA - PERU" : layer036,
+        "LAGOS - PERU" : layer037
     }
 };
 
 L.control.groupedLayers(baseLayers, groupOverLays).addTo(map);
+
 L.control.scale({position: 'bottomleft'}).addTo(map);
 
 map.pm.addControls(options);
+
