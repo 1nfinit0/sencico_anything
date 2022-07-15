@@ -20,7 +20,7 @@ public class ServicioPythonConverterImpl implements ServicioPythonConverter{
         entity.setPathFicheroPython(model.getPathFicheroPython());
         entity.setFicheroPython(model.getFicheroPython());
         entity.setNombreSistema(model.getNombreSistema());
-        entity.setCreatedAt(model.getCreatedAt());
+        entity.setCreateAt(model.getCreateAt());
         
         return entity;
     }
@@ -35,7 +35,7 @@ public class ServicioPythonConverterImpl implements ServicioPythonConverter{
             entity.getPathFicheroPython(),
             entity.getFicheroPython(),
             entity.getNombreSistema(),
-            entity.getCreatedAt()
+            entity.getCreateAt()
     );
     
         return model;

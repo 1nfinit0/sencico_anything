@@ -25,13 +25,13 @@ public class ServicioPythonModel {
     
     @Temporal(TemporalType.DATE)
     @JsonFormat(shape=JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd", timezone = "America/Lima")
-    private Date createdAt;
+    private Date createAt;
 
     public ServicioPythonModel() {
     }
 
     public ServicioPythonModel(String id, String unidad, String sistemaOperativo, String comandoPython,
-            String pathFicheroPython, String ficheroPython, String nombreSistema, Date createdAt) {
+            String pathFicheroPython, String ficheroPython, String nombreSistema, Date createAt) {
         this.id = id;
         this.unidad = unidad;
         this.sistemaOperativo = sistemaOperativo;
@@ -39,7 +39,7 @@ public class ServicioPythonModel {
         this.pathFicheroPython = pathFicheroPython;
         this.ficheroPython = ficheroPython;
         this.nombreSistema = nombreSistema;
-        this.createdAt = createdAt;
+        this.createAt = createAt;
     }
 
     public String getId() {
@@ -98,12 +98,12 @@ public class ServicioPythonModel {
         this.nombreSistema = nombreSistema;
     }
 
-    public Date getCreatedAt() {
-        return createdAt;
+    public Date getCreateAt() {
+        return createAt;
     }
 
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
+    public void setCreateAt(Date createAt) {
+        this.createAt = createAt;
     }
 
     

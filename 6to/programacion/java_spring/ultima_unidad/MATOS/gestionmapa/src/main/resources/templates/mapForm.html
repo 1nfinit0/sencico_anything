@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>SigMap</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.5">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link type="text/css" href="#" th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container mt-4">
+        <h2 class="card-title">Registrar nuevo dato</h2>
+        <form action="#" method="post" th:action="@{/galeria/save}" th:object="${gestionmap}">
+            <input type="hidden" th:field="*{id}">
+            <div class="form-group">
+                <label for="titulo">Titulo</label>
+                <input type="text" class="form-control" th:field="*{titulo}" th:value="${titulo}">
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripcion</label>
+                <input type="text" class="form-control" th:field="*{descripcion}" th:value="${descripcion}">
+            </div>
+            <div class="form-group">
+                <label for="url">Url</label>
+                <input type="text" class="form-control" th:field="*{url}" th:value="${url}">
+            </div>
+            <div class="form-group">
+                <label for="layers">Layer</label>
+                <input type="text" class="form-control" th:field="*{layers}" th:value="${layers}">
+            </div>
+            <div th:if="${flag=='actualizacion'}">
+                <div class="form-group">
+                    <label for="service">Service</label>
+                    <input type="text" class="form-control" th:field="*{service}" th:value="${service}" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="version">Version</label>
+                    <input type="text" class="form-control" th:field="*{version}" th:value="${version}">
+                </div>
+                <div class="form-group">
+                    <label for="request">Request</label>
+                    <input type="text" class="form-control" th:field="*{request}" th:value="${request}" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="longitudIzquierdae">Longitud izquierda</label>
+                    <input type="text" class="form-control" th:field="*{longitudIzquierda}" th:value="${longitudIzquierda}">
+                </div>
+                <div class="form-group">
+                    <label for="latitudIzquierda">Latitud izquierda</label>
+                    <input type="text" class="form-control" th:field="*{latitudIzquierda}" th:value="${latitudIzquierda}">
+                </div>
+                <div class="form-group">
+                    <label for="longitudDerecha">Longitud derecha</label>
+                    <input type="text" class="form-control" th:field="*{longitudDerecha}" th:value="${longitudDerecha}">
+                </div>
+                <div class="form-group">
+                    <label for="latitudDerecha">Latitud derecha</label>
+                    <input type="text" class="form-control" th:field="*{latitudDerecha}" th:value="${latitudDerecha}">
+                </div>
+                <div class="form-group">
+                    <label for="width">Width</label>
+                    <input type="text" class="form-control" th:field="*{width}" th:value="${width}">
+                </div>
+                <div class="form-group">
+                    <label for="height">Height</label>
+                    <input type="text" class="form-control" th:field="*{height}" th:value="${height}">
+                </div>
+                <div class="form-group">
+                    <label for="srs">Srs</label>
+                    <input type="text" class="form-control" th:field="*{srs}" th:value="${srs}" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="format">Format</label>                    
+                    <select class="form-control" th:field="*{format}">
+                        <option th:each="fila:${listFormat}" th:value="${fila.format}" th:text="${fila.format}" th:selected="${fila.format == format}?'selected':''"></option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group text-center">
+                <input type="submit" value="Enviar" class="btn btn-primary" style="width: 120px">
+            </div>
+        </form>
+        <div class="form-group text-center">
+            <a href="#" th:href="@{/galeria/show}"><button type="submit" class="btn btn-info" style="width: 120px">Cancelar</button></a>
+        </div>
+        </div>
+    </body>

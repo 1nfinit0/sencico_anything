@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Servicio-Python</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.5">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	</head>
+	<body>
+		<h2>Registro de Servicio en Python</h2>
+        <form action="#" method="post" th:action="@{/home/save}" th:object="${servicioPython}">
+        
+            <label for="id">Codigo</label>
+            <input type="text" th:field="*{id}" th:value="${id}"></input><br />
+
+            <label for="unidad">Unidad</label>
+            <input type="text" th:field="*{unidad}" th:value="${unidad}"></input><br />
+            
+            <label for="sistemaOperativo">Sistema Operativo</label>
+            <input type="text" th:field="*{sistemaOperativo}" th:value="${sistemaOperativo}"></input><br />
+            
+            <label for="comandoPython">Comando Python</label>
+            <input type="text" th:field="*{comandoPython}" th:value="${comandoPython}"></input><br />
+            
+            <label for="pathFicheroPython">Ruta del Fichero Python</label>
+            <input type="text" th:field="*{pathFicheroPython}" th:value="${pathFicheroPython}"></input><br />
+            
+            <label for="ficheroPython">Nombre del fichero Python</label>
+            <input type="text" th:field="*{ficheroPython}" th:value="${ficheroPython}"></input><br />
+            
+            <label for="nombreSistema">Nombre del Sistema</label>
+            <input type="text" th:field="*{nombreSistema}" th:value="${nombreSistema}"></input><br />
+            
+            <input type="submit"></input>
+            <a href="#" th:href="@{/home/show}"><button>&nbsp;Cancel</button></a>
+
+        </form>
+	</body>
+</html>

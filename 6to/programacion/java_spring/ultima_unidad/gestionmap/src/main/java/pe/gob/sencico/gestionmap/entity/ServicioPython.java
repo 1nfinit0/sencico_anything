@@ -41,8 +41,8 @@ public class ServicioPython implements Serializable{
     
     @Temporal(TemporalType.DATE)
     @JsonFormat(shape=JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd", timezone = "America/Lima")
-    @Column(name = "created_at")
-    private Date createdAt;
+    @Column(name = "create_ad")
+    private Date createAt;
 
 
     public ServicioPython() {
@@ -108,12 +108,12 @@ public class ServicioPython implements Serializable{
         this.nombreSistema = nombreSistema;
     }
 
-    public Date getCreatedAt() {
-        return createdAt;
+    public Date getCreateAt() {
+        return createAt;
     }
 
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
+    public void setCreateAt(Date createAt) {
+        this.createAt = createAt;
     }
     
     

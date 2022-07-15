@@ -16,316 +16,56 @@ var baseLayers = {
     'EsriWorldImagery': L.tileLayer.provider('Esri.WorldImagery')
 };
 
-var layer001 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_06_13/wms', {
-    layers: 'g_06_13:06_13_001_03_001_513_0000_00_00',
-    format: 'image/png',
-    opacity: 1,
-    transparent: true,
-    tiled: 'true'
-});
-var layer002 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_06_13/wms', {
-    layers: 'g_06_13:06_13_002_03_001_513_0000_00_00',
-    format: 'image/png',
-    opacity: 1,
-    transparent: true,
-    tiled: 'true'
-});
-var layer003 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_06_13/wms', {
-    layers: 'g_06_13:06_13_003_03_001_513_0000_00_00',
-    format: 'image/png',
-    opacity: 1,
-    transparent: true,
-    tiled: 'true'
-});
-var layer004 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_06_13/wms', {
-    layers: 'g_06_13:06_13_004_03_001_513_0000_00_00',
-    format: 'image/png',
-    opacity: 1,
-    transparent: true,
-    tiled: 'true'
-});
-var layer005 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_06_13/wms', {
-    layers: 'g_06_13:06_13_005_03_001_513_0000_00_00',
-    format: 'image/png',
-    opacity: 1,
-    transparent: true,
-    tiled: 'true'
-});
-var layer006 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_06_14/wms', {
-    layers: 'g_06_14:06_14_001_03_001_513_0000_00_00',
-    format: 'image/png',
-    opacity: 1,
-    transparent: true,
-    tiled: 'true'
-});
-var layer007 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_06_14/wms', {
-    layers: 'g_06_14:06_14_002_03_001_513_0000_00_00',
-    format: 'image/png',
-    opacity: 1,
-    transparent: true,
-    tiled: 'true'
-});
-var layer008 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_06_14/wms', {
-    layers: 'g_06_14:06_14_003_03_001_513_0000_00_00',
-    format: 'image/png',
-    opacity: 1,
-    transparent: true,
-    tiled: 'true'
-});
-var layer009 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_06_14/wms', {
-    layers: 'g_06_14:06_14_004_03_001_513_0000_00_00',
-    format: 'image/png',
-    opacity: 1,
-    transparent: true,
-    tiled: 'true'
-});
-var layer010 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_06_14/wms', {
-    layers: 'g_06_14:06_14_005_03_001_513_0000_00_00',
-    format: 'image/png',
-    opacity: 1,
-    transparent: true,
-    tiled: 'true'
-});
-var layer011 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_06_15/wms', {
-    layers: 'g_06_15:06_15_001_03_001_513_0000_00_00',
-    format: 'image/png',
-    opacity: 1,
-    transparent: true,
-    tiled: 'true'
-});
-var layer012 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_06_15/wms', {
-     layers: 'g_06_15:06_15_002_03_001_513_0000_00_00',
-     format: 'image/png',
-     opacity: 1,
-     transparent: true,
-     tiled: 'true'
-});
-var layer013 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_06_15/wms', {
-    layers: 'g_06_15:06_15_003_03_001_513_0000_00_00',
-    format: 'image/png',
-    opacity: 1,
-    transparent: true,
-    tiled: 'true'
-});
-var layer014 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_06_15/wms', {
-     layers: 'g_06_15:06_15_004_03_001_513_0000_00_00',
-     format: 'image/png',
-     opacity: 1,
-     transparent: true,
-     tiled: 'true'
-});
-var layer015 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_06_15/wms', {
-     layers: 'g_06_15:06_15_005_03_001_513_0000_00_00',
-     format: 'image/png',
-     opacity: 1,
-     transparent: true,
-     tiled: 'true'
-});
-var layer016 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_06_10/wms', {
-    layers: 'g_06_10:06_10_001_03_001_512_0000_00_00',
-    format: 'image/png',
-    opacity: 1,
-    transparent: true,
-    tiled: 'true'
-});
-var layer017 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_06_10/wms', {
-    layers: 'g_06_10:06_10_002_03_001_512_0000_00_00',
-    format: 'image/png',
-    opacity: 1,
-    transparent: true,
-    tiled: 'true'
-});
-var layer018 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_06_10/wms', {
-    layers: 'g_06_10:06_10_003_03_001_512_0000_00_00',
-    format: 'image/png',
-    opacity: 1,
-    transparent: true,
-    tiled: 'true'
-});
-var layer019 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_06_10/wms', {
-    layers: 'g_06_10:06_10_004_03_001_512_0000_00_00',
-    format: 'image/png',
-    opacity: 1,
-    transparent: true,
-    tiled: 'true'
-});
-var layer020 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_06_10/wms', {
-    layers: 'g_06_10:06_10_005_03_001_512_0000_00_00',
-    format: 'image/png',
-    opacity: 1,
-    transparent: true,
-    tiled: 'true'
-});
-var layer021 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_06_10/wms', {
-    layers: 'g_06_10:06_10_006_03_001_512_0000_00_00',
-    format: 'image/png',
-    opacity: 1,
-    transparent: true,
-    tiled: 'true'
-});
-var layer022 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_06_10/wms', {
-    layers: 'g_06_10:06_10_007_03_001_512_0000_00_00',
-    format: 'image/png',
-    opacity: 1,
-    transparent: true,
-    tiled: 'true'
-});
-var layer023 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_11_05/wms', {
-    layers: 'g_11_05:11_05_001_03_001_531_0000_00_00',
-    format: 'image/png',
-    opacity: 1,
-    transparent: true,
-    tiled: 'true'
-});
-var layer024 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_11_04/wms', {
-    layers: 'g_11_04:11_04_001_03_001_531_0000_00_00',
-    format: 'image/png',
-    opacity: 1,
-    transparent: true,
-    tiled: 'true'
-});
-var layer025 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_11_03/wms', {
-    layers: 'g_11_03:11_03_001_03_001_531_0000_00_00',
-    format: 'image/png',
-    opacity: 1,
-    transparent: true,
-    tiled: 'true'
-});
-var layer026 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_11_02/wms', {
-    layers: 'g_11_02:11_02_001_03_001_531_0000_00_00',
-    format: 'image/png',
-    opacity: 1,
-    transparent: true,
-    tiled: 'true'
-});
-var layer027 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_11_01/wms', {
-    layers: 'g_11_01:11_01_001_03_001_531_0000_00_00',
-    format: 'image/png',
-    opacity: 1,
-    transparent: true,
-    tiled: 'true'
-});
-var layer028 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_11_06/wms', {
-    layers: 'g_11_06:11_06_001_03_001_531_0000_00_00',
-    format: 'image/png',
-    opacity: 1,
-    transparent: true,
-    tiled: 'true'
-});
-var layer029 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_11_10/wms', {
-    layers: 'g_11_10:11_10_001_03_001_531_0000_00_00',
-    format: 'image/png',
-    opacity: 1,
-    transparent: true,
-    tiled: 'true'
-});
-var layer030 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_11_09/wms', {
-    layers: 'g_11_09:11_09_001_03_001_531_0000_00_00',
-    format: 'image/png',
-    opacity: 1,
-    transparent: true,
-    tiled: 'true'
-});
-var layer031 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_11_08/wms', {
-    layers: 'g_11_08:11_08_001_03_001_531_0000_00_00',
-    format: 'image/png',
-    opacity: 1,
-    transparent: true,
-    tiled: 'true'
-});
-var layer032 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_11_07/wms', {
-    layers: 'g_11_07:11_07_001_03_001_531_0000_00_00',
-    format: 'image/png',
-    opacity: 1,
-    transparent: true,
-    tiled: 'true'
-});
-var layer033 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_00_02/wms', {
+var layer001 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_00_02/wms', {
     layers: 'g_00_02:00_02_002_03_000_000_0000_00_00',
     format: 'image/png',
     opacity: 1,
     transparent: true,
     tiled: 'true'
 });
-var layer034 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_00_02/wms', {
+var layer002 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_00_02/wms', {
     layers: 'g_00_02:00_02_003_03_000_000_0000_00_00',
     format: 'image/png',
     opacity: 1,
     transparent: true,
     tiled: 'true'
 });
-var layer035 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_00_06/wms', {
-    layers: 'g_00_06:00_06_001_03_000_000_0000_00_00',
+var layer003 = L.tileLayer.wms('http://172.20.255.14:8081/geoserver/Practica_PUB/wms', {
+    layers: 'Practica_PUB:limite_nacional',
     format: 'image/png',
     opacity: 1,
     transparent: true,
     tiled: 'true'
 });
-var layer036 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_00_05/wms', {
-    layers: 'g_00_05:00_05_001_03_000_000_0000_00_00',
+var layer004 = L.tileLayer.wms('http://172.20.255.14:8081/geoserver/Practica_PUB/wms', {
+    layers: 'Practica_PUB:cuencas',
     format: 'image/png',
     opacity: 1,
     transparent: true,
     tiled: 'true'
 });
-var layer037 = L.tileLayer.wms('http://idesep.senamhi.gob.pe:80/geoserver/g_00_05/wms', {
-    layers: 'g_00_05:00_05_002_03_000_000_0000_00_00',
+var layer005 = L.tileLayer.wms('http://172.20.255.14:8081/geoserver/Practica_PUB/wms', {
+    layers: 'Practica_PUB:rios',
+    format: 'image/png',
+    opacity: 1,
+    transparent: true,
+    tiled: 'true'
+});
+var layer006 = L.tileLayer.wms('http://172.20.255.14:8081/geoserver/Practica_PUB_SANTA/wms', {
+    layers: 'Practica_PUB_SANTA:SantaSubset',
     format: 'image/png',
     opacity: 1,
     transparent: true,
     tiled: 'true'
 });
 var groupOverLays = {
-    "Cambio de Precipitación": {
-        "2050 - ANUAL": layer001,
-        "2050 - VERANO": layer002,
-        "2050 - INVIERNO": layer003,
-        "2050 - OTOÑO": layer004,
-        "PRIMAVERA": layer005
-    },
-    "Cambio de Temperatura mínima": {
-        "2050 - ANUAL": layer006,
-        "2050 - VERANO": layer007,
-        "2050 - INVIERNO": layer008,
-        "2050 - OTOÑO": layer009,
-        "PRIMAVERA": layer010
-    },
-    "Cambio de Temperatura máxima": {
-        "2050 - ANUAL": layer011,
-        "2050 - VERANO": layer012,
-        "2050 - INVIERNO": layer013,
-        "2050 - OTOÑO": layer014,
-        "2050 - PRIMAVERA": layer015
-    },
-    "Tendencia de temperatura máxima": {
-        "01 ENERO - PERÚ" : layer016,
-        "02 FEBRERO - PERÚ" : layer017,
-        "03 MARZO - PERÚ" : layer018,
-        "04 ABRIL - PERÚ" : layer019,
-        "05 MAYO - PERÚ" : layer020,
-        "06 JUNIO - PERÚ" : layer021,
-        "07 JULIO - PERÚ" : layer022
-    },
-    "Riesgo Agroclimático": {
-        "Café" : layer023,
-        "Cacao" : layer024,
-        "Papa" : layer025,
-        "Maiz" : layer026,
-        "Arroz" : layer027,
-        "Pasto" : layer028,
-        "Frijol grano seco" : layer029,
-        "Cebolla" : layer030,
-        "Palto" : layer031,
-        "Quinua" : layer032
-    },
-    "Límites": {
-        "Límite departamental" : layer033,
-        "Límite de provincia" : layer034
-    },
-    "Hidrografía": {
-        "Cuencas Hidrográficas" : layer035,
-        "Hidrografía" : layer036,
-        "Lagos" : layer037
+    "Cartografía base IGN": {
+        "Departamentos": layer001,
+        "Límite Provincial": layer002,
+        "Límite Nacional": layer003,
+        "Cuencas": layer004,
+        "Ríos": layer005,
+        "Cuenca Santa": layer006
     }
 };
 
