@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>SigMap</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.5">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link type="text/css" href="#" th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css}" rel="stylesheet">
+        <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css}">
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="#"><img alt="#" src="#" th:src="@{/img/logo.png}" class="d-inline-block align-top">Galeria de Mapas</a>
+            <a th:href="@{/galeria/view}"><button type="button" class="btn btn-primary"><i class="fa fa-eye">&nbsp;Ver galeria</i></button></a>
+        </nav>
+        <div class="mt-4" style="margin: 2%">
+        <div class="row">
+        <h2>Lista de Mapas de la Galer&iacute;a</h2>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <td colspan="8">
+                        <a th:href="@{/galeria/add}" class="btn btn-primary"><i class="fa fa-file">&nbsp;Nuevo Mapa</i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">T&iacute;tulo</th>
+                    <th scope="col">Descripci&oacute;n</th>
+                    <th scope="col">Url</th>
+                    <th scope="col">Layer</th>
+                    <th scope="col">DNI</th>
+                    <th scope="col">Update</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="fila:${gestionmap}">
+                    <td th:text="${fila.id}"></td>
+                    <td th:text="${fila.titulo}"></td>
+                    <td th:text="${fila.descripcion}"></td>
+                    <td th:text="${fila.url}"></td>
+                    <td th:text="${fila.layers}"></td>
+                    <td th:text="${fila.dniResponsable}"></td>
+                    <td><a href="#" th:href="@{/galeria/edit/__${fila.id}__/}" class="btn btn-info"><i class="fa fa-refresh">&nbsp;Actualizar</i></a></td>
+                    <td><a href="#" th:href="@{/galeria/del/__${fila.id}__/}" class="btn btn-danger"><i class="fa fa-trash">&nbsp;Retirar</i></a></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        </div>
+    </body>
+</html>
