@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Servicio-Python</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.5">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="#" th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css}" rel="stylesheet">
+</head>
+<body>
+    <h2>Lista de Servicios Python</h2>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <td colspan="9"><a th:href="@{/home/add}"><button type="button" class="btn btn-primary">Nuevo</button></a></td>
+            </tr>
+            <tr>
+                <th scope="col">Codigo</th>
+                <th scope="col">Unidad</th>
+                <th scope="col">Sistema Operativo</th>
+                <th scope="col">Comando Python</th>
+                <th scope="col">Ruta-Fichero-py</th>
+                <th scope="col">Fichero-py</th>
+                <th scope="col">Sistema</th>
+                <th scope="col">&nbsp;</th>
+                <th scope="col">&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="fila:${listServicioPython}">
+                <td th:text="${fila.id}"></td>
+                <td th:text="${fila.unidad}"></td>
+                <td th:text="${fila.sistemaOperativo}"></td>
+                <td th:text="${fila.comandoPython}"></td>
+                <td th:text="${fila.pathFicheroPython}"></td>
+                <td th:text="${fila.ficheroPython}"></td>
+                <td th:text="${fila.nombreSistema}"></td>
+                <td><a href="#" th:href="@{/home/edit/__${fila.id}__/}"><button type="button" class="btn btn-info">update</button></a></td>
+                <td><a href="#" th:href="@{/home/del/__${fila.id}__/}"><button type="button" class="btn btn-danger">delete</button></a></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
